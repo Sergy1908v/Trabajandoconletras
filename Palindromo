@@ -1,0 +1,15 @@
+const palabra = prompt("Ingresa una palabra:");
+
+let esPalindromo = true;
+
+for (let i = 0; i < palabra.length / 2; i++) {
+    if (palabra[i] !== palabra[palabra.length - 1 - i]) {
+        esPalindromo = false;
+        break;
+    }
+}
+
+if (esPalindromo) {
+    console.log(`${palabra} es un palíndromo.`);
+} else {
+    console.log(`${palabra} no es un palíndromo.`);
